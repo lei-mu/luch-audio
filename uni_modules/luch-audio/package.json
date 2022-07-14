@@ -2,14 +2,11 @@
 	"id": "luch-audio",
 	"displayName": "luch-audio(api封装audio音频组件)",
 	"description": "基于createInnerAudioContext封装audio音频组件（样式同原生audio组件)",
-	"version": "1.0.3",
+	"version": "1.0.5",
 	"keywords": ["createInnerAudioContext", "audio", "luch"],
 	"author": "luch",
 	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/lei-mu/luch-audio.git"
-	},
+	"repository": "https://github.com/lei-mu/luch-audio.git",
 	"bugs": {
 		"url": "https://github.com/lei-mu/luch-audio/issues"
 	},
@@ -19,7 +16,7 @@
 			"前端组件",
 			"通用组件"
 		],
-		"contact": { // 插件作者 QQ，方便管理员审核时与作者快速沟通。
+		"contact": {
 			"qq": "370306150"
 		},
 		"declaration": {
