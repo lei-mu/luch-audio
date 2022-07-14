@@ -4,6 +4,16 @@
 	"description": "基于createInnerAudioContext封装audio音频组件（样式同原生audio组件)",
 	"version": "1.0.3",
 	"keywords": ["createInnerAudioContext", "audio", "luch"],
+	"author": "luch",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/lei-mu/luch-audio.git"
+	},
+	"bugs": {
+		"url": "https://github.com/lei-mu/luch-audio/issues"
+	},
+	"homepage": "https://ext.dcloud.net.cn/plugin?id=480",
 	"dcloudext": {
 		"category": [
 			"前端组件",
