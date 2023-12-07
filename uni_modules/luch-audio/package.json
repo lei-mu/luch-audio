@@ -2,7 +2,7 @@
 	"id": "luch-audio",
 	"displayName": "luch-audio(api封装audio音频组件)",
 	"description": "基于createInnerAudioContext封装audio音频组件（样式同原生audio组件)",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"keywords": ["createInnerAudioContext", "audio", "luch"],
 	"author": "luch",
 	"license": "MIT",

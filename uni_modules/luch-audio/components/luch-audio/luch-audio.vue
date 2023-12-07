@@ -80,10 +80,12 @@ export default {
 			type: Boolean
 			// default: false
 		},
+		// #ifdef MP-WEIXIN || MP-BAIDU || MP-TOUTIAO || MP-LARK || MP-JD || MP-KUAISHOU
 		obeyMuteSwitch: {
-			type: Boolean,
+			type: Boolean
 			// default: true
 		},
+		// #endif
 		// 初始化回调
 		initAudio: {
 			type: Function
@@ -152,7 +154,6 @@ export default {
 			this.$emit('update:play', this.videoIsPlay);
 		},
 		contextInit() {
-			console.log('创建');
 			let that = this;
 			that.$emit('update:play', false);
 			if (!that.src) {
@@ -161,11 +162,14 @@ export default {
 				}
 				return;
 			}
-			console.log(this.$props);
 			let innerAudioContext = uni.createInnerAudioContext();
 			innerAudioContext.autoplay = that.autoplay;
 			innerAudioContext.loop = that.loop;
-			innerAudioContext.obeyMuteSwitch = that.obeyMuteSwitch;
+			// #ifdef MP-WEIXIN || MP-BAIDU || MP-TOUTIAO || MP-LARK || MP-JD || MP-KUAISHOU
+			if (typeof that.obeyMuteSwitch === 'boolean') {
+				innerAudioContext.obeyMuteSwitch = that.obeyMuteSwitch;
+			}
+			// #endif
 			innerAudioContext.onPlay((...arg) => {
 				that.audioTimeUpdate = sToHs(Math.floor(innerAudioContext.currentTime));
 				that.audioOnPlay();
@@ -181,10 +185,9 @@ export default {
 			});
 			innerAudioContext.onTimeUpdate((...arg) => {
 				that.audioTimeUpdate = sToHs(Math.floor(innerAudioContext.currentTime));
-				that.$emit('onPause', ...arg);
+				that.$emit('onTimeUpdate', ...arg);
 			});
 			innerAudioContext.onError((...arg) => {
-				console.log(...arg);
 				that.$emit('onError', ...arg);
 			});
 			innerAudioContext.src = that.src;
