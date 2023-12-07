@@ -1,3 +1,5 @@
+## 1.0.7（2023-12-07）
+更新示例项目
 ## 1.0.6（2023-12-07）
 `obeyMuteSwitch` 增加条件编译
 修复 event `onTimeUpdate` bug
