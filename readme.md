@@ -31,6 +31,20 @@
 |initAudio|初始化AudioContext 回调；返回 innerAudioContext； { src，  index}|Function|—|—|—|
 |index|自定义组件标识；在initAudio 返回|String, Number|—|—|—|
 
+
+
+**Events**
+
+| 事件名       | 说明                                         | 参数   |
+| ------------ | -------------------------------------------- | ------ |
+| onPlay       | createInnerAudioContext 的 onPlay 事件       | 同原生 |
+| onPause      | createInnerAudioContext 的 onPause 事件      | 同原生 |
+| onEnded      | createInnerAudioContext 的 onEnded 事件      | 同原生 |
+| onTimeUpdate | createInnerAudioContext 的 onTimeUpdate 事件 | 同原生 |
+| onError      | createInnerAudioContext 的 onError事件       | 同原生 |
+
+
+
 **平台支持度**
 --
 
@@ -48,8 +62,7 @@
 **更新**
 --
 
-- v0.0.1 组件
-- 1.0.3
+[ChangeLog](./changelog.md)
 
 **可扩展性**
 --
